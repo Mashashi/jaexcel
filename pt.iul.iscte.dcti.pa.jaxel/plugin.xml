@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension-point id="pt.iul.iscte.dcti.pa.jaxel.selecteddocumentcontrol" name="Selected Document Control" schema="schema/pt.iul.iscte.dcti.pa.jaxel.selecteddocumentcontrol.exsd"/>
+   <extension-point id="pt.iul.iscte.dcti.pa.jaxel.selectedsheetcontrol" name="Selected Sheet Control" schema="schema/pt.iul.iscte.dcti.pa.jaxel.selectedsheetcontrol.exsd"/>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="org.eclipse.ui"
+            class="pt.iul.iscte.dcti.pa.jaxel.TableView"
+            id="pt.iul.iscte.dcti.pa.jaxel.view1"
+            name="Table View"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            category="org.eclipse.ui"
+            class="pt.iul.iscte.dcti.pa.jaxel.HistogramView"
+            id="pt.iul.iscte.dcti.pa.jaxel.view2"
+            name="Histogram View"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>

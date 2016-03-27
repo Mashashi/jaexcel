@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/pt.iul.iscte.dcti.pa.jaxelmodel/src" modelPluginID="pt.iul.iscte.dcti.pa.jaxelmodel"
+    modelName="Jaxel" importerID="org.eclipse.emf.importer.ecore" complianceLevel="7.0"
+    copyrightFields="false">
+  <foreignModel>jaxel.ecore</foreignModel>
+  <genPackages prefix="Jaxel" basePackage=" pt.iul.iscte.dcti.pa" disposableProviderFactory="true"
+      ecorePackage="jaxel.ecore#/">
+    <genClasses ecoreClass="jaxel.ecore#//Sheet">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jaxel.ecore#//Sheet/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jaxel.ecore#//Sheet/numberOfRows"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jaxel.ecore#//Sheet/numberOfColumns"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jaxel.ecore#//Sheet/rows"/>
+    </genClasses>
+    <genClasses ecoreClass="jaxel.ecore#//Document">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jaxel.ecore#//Document/sheet_file"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jaxel.ecore#//Document/binFolder"/>
+    </genClasses>
+    <genClasses ecoreClass="jaxel.ecore#//Row">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jaxel.ecore#//Row/columns"/>
+      <genOperations ecoreOperation="jaxel.ecore#//Row/toString"/>
+    </genClasses>
+    <genClasses ecoreClass="jaxel.ecore#//CellColumn">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jaxel.ecore#//CellColumn/value"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jaxel.ecore#//CellColumn/result"/>
+    </genClasses>
+    <genClasses ecoreClass="jaxel.ecore#//EIntegerObjectToCellColumnMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jaxel.ecore#//EIntegerObjectToCellColumnMap/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jaxel.ecore#//EIntegerObjectToCellColumnMap/value"/>
+    </genClasses>
+    <genClasses ecoreClass="jaxel.ecore#//EIntegerObjectToRowMap">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute jaxel.ecore#//EIntegerObjectToRowMap/key"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference jaxel.ecore#//EIntegerObjectToRowMap/value"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
